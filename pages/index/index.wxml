@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="login-form">
+    <!--姓名  -->
+    <view class="inputView">
+     <image class="nameImage" src="../../image/name.png"></image>
+      <label class="loginLab">姓名：</label>
+      <input class='inputText' bindinput='nameInput' type='text'></input>
+    </view>
+    <!-- 部门 -->
+    <view class='inputView'>
+      <image class="departmentImage" src="../../image/department.png"></image>
+      <label class="loginLab">部门：</label>
+      <input class="inputText" bindinput='departmentInput' type='text'></input>
+    </view>
+  <!-- 手机 -->
+    <view class='inputView'>
+      <image class="phoneImage" src="../../image/phone.png"></image>
+      <label class='loginLab'>手机：</label>
+      <input class='inputText' bindinput='phoneInput' maxlength="11" type='number'></input>
+    </view>
+    <!-- 登录按钮 -->
+    <view class='loginBtnView'>
+      <button class="loginBtn" type="warn" size='{{primarySize}}' loading='{{loading}}'
+        plain='{{plain}}' disabled='{{disabled}}' bindtap='login'
+      >登录</button>
+    </view>
+  </view>
+  <!-- <view class='list-msg'>
+  <view class='list-msg2' bindtap='bindShowMsg'>
+        <text>{{tihuoWay}}</text>
+    </view>
+      <view class="select_box" wx:if="{{select}}">
+        <view class="select_one" bindtap="mySelect" data-name="重庆分店">重庆分店</view>
+        <view class="select_one" bindtap="mySelect" data-name="东莞南城分店">东莞南城分店</view>
+        <view class="select_one" bindtap="mySelect" data-name="东莞总店">东莞总店</view>
+    </view>
+  </view> -->
+</view>

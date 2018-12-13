@@ -1,0 +1,5 @@
+<!--pages/run/run.wxml-->
+<text>pages/run/run.wxml</text>
+<view class="btn-area">
+  <navigator url="../index/index" hover-class="navigator-hover">跳转到新页面</navigator>
+</view>

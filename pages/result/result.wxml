@@ -1,0 +1,47 @@
+<view class="page">
+
+  <view style='font-size:40rpx;text-align:center;padding-top:20rpx;'>得分:{{score}}/100</view>
+  <view style='border-bottom: 1rpx solid #959595;margin-top:30rpx;'></view>
+  <view style=' margin: 20rpx;font-size:35rpx;'><text style=' margin-right: 10rpx;font-size:40rpx;color:#959595;'>|</text>单选</view>
+
+  <view class='row'> 
+    <view bindtap='showDeatil'  data-index="0"  class="{{nowAnswerResultList[0].userResult==true? 'item':'item2'}}">1</view>
+    <view bindtap='showDeatil'  data-index="1"   class="{{nowAnswerResultList[1].userResult==true? 'item':'item2'}}">2</view>
+    <view bindtap='showDeatil'  data-index="2"   class="{{nowAnswerResultList[2].userResult==true? 'item':'item2'}}">3</view>
+    <view bindtap='showDeatil'   data-index="3"  class="{{nowAnswerResultList[3].userResult==true? 'item':'item2'}}">4</view>
+    <view bindtap='showDeatil'  data-index="4"   class="{{nowAnswerResultList[4].userResult==true? 'item':'item2'}}">5</view>
+  </view>
+
+  <!-- <view class='row'>
+    <view bindtap='showDeatil'  data-index="5" class="{{nowAnswerResultList[5].userResult==true? 'item':'item2'}}">6</view>
+    <view bindtap='showDeatil'  data-index="6" class="{{nowAnswerResultList[6].userResult==true? 'item':'item2'}}">7</view>
+    <view bindtap='showDeatil' data-index="7"  class="{{nowAnswerResultList[7].userResult==true? 'item':'item2'}}">8</view>
+    <view bindtap='showDeatil'  data-index="8" class="{{nowAnswerResultList[8].userResult==true? 'item':'item2'}}">9</view>
+    <view bindtap='showDeatil'  data-index="9" class="{{nowAnswerResultList[9].userResult==true? 'item':'item2'}}">10</view>
+  </view> -->
+
+
+  <!-- <view style=' margin: 80rpx 20rpx 20rpx 20rpx;font-size:35rpx;'><text style=' margin-right: 10rpx;font-size:40rpx;color:#959595;'>|</text>判断</view>
+
+  <view class='row'>
+    <view bindtap='showDeatil' data-index="10"  class="{{nowAnswerResultList[10].userResult==true? 'item':'item2'}}">1</view>
+    <view bindtap='showDeatil' data-index="11"  class="{{nowAnswerResultList[11].userResult==true? 'item':'item2'}}">2</view>
+    <view bindtap='showDeatil'  data-index="12" class="{{nowAnswerResultList[12].userResult==true? 'item':'item2'}}">3</view>
+    <view bindtap='showDeatil'  data-index="13"  class="{{nowAnswerResultList[13].userResult==true? 'item':'item2'}}">4</view>
+    <view bindtap='showDeatil' data-index="14"  class="{{nowAnswerResultList[14].userResult==true? 'item':'item2'}}">5</view>
+  </view>
+
+  <view class='row'>
+    <view bindtap='showDeatil'  data-index="15"  class="{{nowAnswerResultList[15].userResult==true? 'item':'item2'}}">6</view>
+    <view bindtap='showDeatil'   data-index="16" class="{{nowAnswerResultList[16].userResult==true? 'item':'item2'}}">7</view>
+    <view bindtap='showDeatil'   data-index="17" class="{{nowAnswerResultList[17].userResult==true? 'item':'item2'}}">8</view>
+    <view bindtap='showDeatil'  data-index="18"  class="{{nowAnswerResultList[18].userResult==true? 'item':'item2'}}">9</view>
+    <view bindtap='showDeatil'  data-index="19" class="{{nowAnswerResultList[19].userResult==true? 'item':'item2'}}">10</view>
+  </view>
+
+  <view class='bottom'>
+    <view style='font-size:35rpx;'>错题已收录至错题本，再接再厉！</view>
+  </view>  -->
+
+</view>
+

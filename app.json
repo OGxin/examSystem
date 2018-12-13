@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/grid/index",
+    "pages/answer/answer",
+    "pages/index/index",
+    "pages/menu/menu",
+    "pages/logs/logs",
+    "pages/run/run",
+    "pages/exam/exam",
+    "pages/result/result",
+    "pages/wrongQuestion/wrongQuestion"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#c91f17",
+    "navigationBarTitleText": "广州市信息化服务中心",
+    "navigationBarTextStyle":"#ffffff"
+  }
+}

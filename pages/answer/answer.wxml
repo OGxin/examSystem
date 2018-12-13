@@ -1,0 +1,42 @@
+<view class="page">
+  <view class='top'>  
+    <view class='topLeft'><text style='margin-left:20rpx;'><text style='margin-left:10rpx;margin-right:10rpx;'>{{nowQuestionNumber+1}} / {{questionNum}}</text>{{questionTypeCH}}</text></view>
+    <view class='topRight'>
+      <view class='topRightContent'>
+        <image src='../../image/time.png' class="timeImage"></image>
+        <text style='margin-right:25rpx;'>{{hh}}:{{mm}}:{{ss}}</text>
+        <image src='../../image/keep.png' class='keepImage'></image>
+        <!-- <text style='font-style:italic;margin-right:10rpx;'>{{nowQuestionNumber+1}}</text><text> / {{questionNum}}</text> -->
+      </view>
+    </view>
+  </view> 
+
+  <view class='questionTitle'>
+    {{nowQuestionNumber+1}}.{{nowQuestion.question}}
+  </view>
+ 
+  <view class='questionOption'  wx:if="{{questionType=='SC'}}">
+            <view class="{{choseA==true? 'choseA':'noChoseA'}}" bindtap='choseItem' data-choseitem="A">
+                <radio checked="{{choseA == true ? true:false}}" value='' />
+                  A. {{nowQuestion.option.A}}
+            </view>
+            <view class="{{choseB==true? 'choseB':'noChoseB'}}" bindtap='choseItem' data-choseitem="B">
+              <radio checked="{{choseB==true? true:false}}"></radio>
+                B. {{nowQuestion.option.B}}
+            </view>
+            <view class="{{choseC==true? 'choseC':'noChoseC'}}" bindtap='choseItem' data-choseitem="C">
+                <radio checked='{{choseC==true?true:false}}'></radio>
+                C. {{nowQuestion.option.C}}
+            </view>
+            <view class="{{choseD==true? 'choseD':'noChoseD'}}" bindtap='choseItem' data-choseitem="D">
+                <radio checked='{{choseD==true?true:false}}'></radio>
+                D. {{nowQuestion.option.D}}
+            </view>
+
+  </view>
+    <button class='btn' style='margin-left:35px;float:left;' bindtap='before1' disabled="{{before}}">上一题</button>
+    <button class='btn' style='margin-right:35px;float:right;' bindtap='after1' disabled='{{after}}'>下一题</button>
+   <view class='bottom'>
+    <view class='afterQuestion' bindtap='submit'>交卷</view>
+  </view> 
+</view>
