@@ -1,9 +1,8 @@
 {
   "pages":[
+    "pages/index/index",
     "pages/grid/index",
     "pages/answer/answer",
-    "pages/index/index",
-    "pages/menu/menu",
     "pages/logs/logs",
     "pages/run/run",
     "pages/exam/exam",
