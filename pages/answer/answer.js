@@ -155,7 +155,7 @@ Page({
           else if (nowQuestionNumber == 4){
             wx.redirectTo({
               // url: '../result/result'
-              url: '../wrongQuestion/wrongQuestion'
+              url: '../wrongQuestion/wrongQuestion?title='+that.data.title
             })
           }
         }, 500);
@@ -202,7 +202,7 @@ Page({
         else if (nowQuestionNumber == 4) {
           wx.redirectTo({
             // url: '../result/result'
-            url: '../wrongQuestion/wrongQuestion'
+            url: '../wrongQuestion/wrongQuestion?title=' + that.data.title
           })
         }
       }, 500);
@@ -250,7 +250,7 @@ Page({
         else if (nowQuestionNumber == 4) {
           wx.redirectTo({
             // url: '../result/result'
-            url: '../wrongQuestion/wrongQuestion'
+            url: '../wrongQuestion/wrongQuestion?title=' + that.data.title
           })
         }
       }, 500);
@@ -297,7 +297,7 @@ Page({
         else if (nowQuestionNumber == 4) {
           wx.redirectTo({
             // url: '../result/result'
-            url:'../wrongQuestion/wrongQuestion'
+            url: '../wrongQuestion/wrongQuestion?title=' + that.data.title
           })
         }
       }, 500);
@@ -345,7 +345,7 @@ Page({
   // 点击交卷
   submit:function(){
     wx.redirectTo({
-      url: '../wrongQuestion/wrongQuestion'
+      url: '../wrongQuestion/wrongQuestion?title=' + that.data.title
     })
   }
 

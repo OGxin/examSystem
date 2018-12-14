@@ -11,21 +11,35 @@ Page({
     questionListLength: 0,
     showAnswer: true,
     score:0,
+    title:'',
+    correctNum:0,
+    errorNum:0,
+    TFValue:false,
+    before: false,
+    after: false
   },
 
   // 页面加载
   onLoad: function (options) {
     that = this;
+  //加载页面传过来的参数
+    this.setData({
+      title:options.title
+    })
     var wrongAnswerList=app.globalData.wrongAnswerList;
+    var questionSum = app.globalData.nowAnswerResultList.length;
     if (wrongAnswerList.length != 0){
       that.setData({
         questionList: wrongAnswerList,
         nowQuestion: wrongAnswerList[0],
         questionListLength: wrongAnswerList.length,
+        errorNum:wrongAnswerList.length,
         score:app.globalData.score,
+        correctNum: questionSum - wrongAnswerList.length,
       })
       console.log("wrongAnswerList" + wrongAnswerList[0]);
-    }else{
+    }
+    else{
       wx.showModal({
         title: '提示',
         content: '暂无错题',
@@ -37,7 +51,12 @@ Page({
         }
       })
     }
-   
+  },
+  // 设置导航栏标题
+  onReady:function(){
+    wx.setNavigationBarTitle({
+      title: this.data.title,
+    })
   },
   // 移除该题
   remove: function () {
@@ -71,7 +90,7 @@ Page({
         showAnswer: false
       })
   },
-
+  //下一题
   after1: function () {
     var nowQuestionNumber = that.data.nowQuestionNumber;
     var questionList = that.data.questionList;
@@ -81,7 +100,11 @@ Page({
       that.setData({
         nowQuestion: questionList[nowQuestionNumber],
         nowQuestionNumber: nowQuestionNumber,
-        showAnswer: false
+        before: false
+      })
+    } else {
+      that.setData({
+        after: true
       })
     }
   },
@@ -103,7 +126,7 @@ Page({
       })
     }
   },
-
+  // 上一题
   before1: function () {
     var nowQuestionNumber = that.data.nowQuestionNumber;
     var questionList = that.data.questionList;
@@ -113,7 +136,11 @@ Page({
       that.setData({
         nowQuestion: questionList[nowQuestionNumber],
         nowQuestionNumber: nowQuestionNumber,
-        showAnswer: false
+        after: false
+      })
+    }else {
+      that.setData({
+        before: true
       })
     }
   },

@@ -39,6 +39,7 @@ page{
 .content{
   font-size: 32rpx;
   margin: 20rpx;
+  color:#000000;
 }
 
 .item{
@@ -78,4 +79,27 @@ page{
   margin: 20rpx;
   display: inline-block;
   float:right;
+}
+.question_number{
+  border:1px solid #d8d8d8;
+  border-radius: 18rpx;
+  margin-left: 3px;
+  margin-right: 3px;
+  height: 30px;
+}
+.number{
+  display: inline-block;
+  margin-left: 30rpx;
+  margin-top: 5px;
+  font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+}
+.btn{
+width:27%;
+margin-top:75rpx;
+background-color:#d20000;
+color:white;
+border-radius:12px;
+height:35px;
+font-size:15px;
+display:inline-block;
 }

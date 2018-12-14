@@ -1,13 +1,13 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/grid/index",
+    "pages/wrongQuestion/wrongQuestion",
+    "pages/index/index",
     "pages/answer/answer",
     "pages/logs/logs",
     "pages/run/run",
     "pages/exam/exam",
-    "pages/result/result",
-    "pages/wrongQuestion/wrongQuestion"
+    "pages/result/result"
   ],
   "window":{
     "backgroundTextStyle":"light",
