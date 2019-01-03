@@ -1,0 +1,48 @@
+<view class="page">
+  <view style='font-size:40rpx;text-align:center;padding-top:20rpx;'>考试得分:{{score}}分</view>
+  <view class="question_number">
+    <view class="number">对{{correctNum}}道</view>
+    <view class="number">错{{errorNum}}道</view>
+  </view>
+  <view style='border-bottom: 1rpx solid #959595;margin-top:30rpx;' wx:if="{{TFValue}}"></view>
+  <view class='top' wx:if="{{TFValue}}">
+    <view bindtap='before1'>‹</view>
+    <view bindtap='before10'>‹‹</view>
+    <view bindtap='remove'>移除该题</view>
+    <view bindtap='after10'>››</view>
+    <view bindtap='after1'>›</view>
+  </view>
+
+  <view class='content'>
+    <view class='title'>{{nowQuestionNumber+1}}.{{nowQuestion.question.question}}</view>
+  </view>
+
+  <view class='options'>
+    <view class='item'>A.{{nowQuestion.question.option.A}}</view>
+    <view class='item'>B.{{nowQuestion.question.option.B}}</view>
+    <view class='item'>C.{{nowQuestion.question.option.C}}</view>
+    <view class='item'>D.{{nowQuestion.question.option.D}}</view>
+  </view>
+
+  <!-- <view class='line'>
+    <view class='showAnswer' bindtap='showAnswer'>显示答案</view>
+  </view> -->
+
+
+  <view class='question_number'>
+    <view class='correct_answer'>正确答案：</view>
+    <view class='correct_answer' wx:if="{{nowQuestion.question.answer=='A'}}">A</view>
+    <view class='correct_answer' wx:if="{{nowQuestion.question.answer=='B'}}">B</view>
+    <view class='correct_answer' wx:if="{{nowQuestion.question.answer=='C'}}">C</view>
+    <view class='correct_answer' wx:if="{{nowQuestion.question.answer=='D'}}">D</view>
+
+    <view class='your_answer' wx:if="{{nowQuestion.yourChose=='A'}}">A</view>
+    <view class='your_answer' wx:if="{{nowQuestion.yourChose=='B'}}">B</view>
+    <view class='your_answer' wx:if="{{nowQuestion.yourChose=='C'}}">C</view>
+    <view class='your_answer' wx:if="{{nowQuestion.yourChose=='D'}}">D</view>
+    <view class='your_answer'>您的答案：</view>
+  </view>
+
+  <button class='btn' style='margin-left:35px;float:left;' bindtap='before1' disabled="{{before}}">上一题</button>
+    <button class='btn' style='margin-right:35px;float:right;' bindtap='after1' disabled='{{after}}'>下一题</button>
+</view>

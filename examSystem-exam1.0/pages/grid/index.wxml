@@ -1,0 +1,39 @@
+<view class='login-icon'>
+  <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}' circular='{{circular}}'>
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image  src="{{item}}" class='slide-image'></image>
+        </swiper-item>
+      </block>
+  </swiper>
+</view>
+<i-grid>
+    <i-row>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon size="24" type="activity" />
+                <i-grid-label>学习库</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+        <i-grid-item bindtap='beginAnswer'>
+            <i-grid-icon >
+                <i-icon size="24" type="addressbook" />
+                <i-grid-label >考试中心</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+    </i-row>
+    <i-row>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon size="24" type="collection" />
+                <i-grid-label>我的收藏</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+        <i-grid-item bindtap='openWrongQuestion'>
+            <i-grid-icon>
+                <i-icon size="24" type="computer" />
+                <i-grid-label>我的错题</i-grid-label>
+            </i-grid-icon>
+        </i-grid-item>
+    </i-row>
+</i-grid>
